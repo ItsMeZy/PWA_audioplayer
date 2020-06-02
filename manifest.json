@@ -1,0 +1,16 @@
+{
+    "short_name": "player",
+    "name": "Player app",
+    "icons": [
+        {
+            "src": "/icons/play.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#014473",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#014473"
+}

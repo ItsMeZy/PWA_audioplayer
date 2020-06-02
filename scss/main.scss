@@ -15,6 +15,9 @@ body,html{
     background: #014473;
     overflow: hidden;
 }
+body{
+    overscroll-behavior-y: contain; 
+}
 
 #app{
     height: 100%;
