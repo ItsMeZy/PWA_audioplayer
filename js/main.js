@@ -64,39 +64,11 @@ var startTimer = function(duration, element){
   }
 }
 const canvas = document.querySelector('canvas');
-console.log("ciao");
-window.onchange = function(){
-  var audioCtx = new AudioContext()
-  var analyser = audioCtx.createAnalyser();
-  let source = audioCtx.createMediaElementSource(player);
-  source.connect(analyser);
-  analyser.connect(audioCtx.destination);
-  
-  analyser.fftSize = 2048;
-  
-  const bufferLenght = analyser.frequencyBinCount;
-  
-  const dataArray = new Uint8Array(bufferLenght);
-  
-  console.log('DATA-ARRAY',dataArray);
-  
-  const barWidth = (cWidth / bufferLenght)*13;
-  
-  let barHeight;
-  let x=0;
-  
-  function renderFrame(){
-    requestAnimationFrame(renderFrame);
-  
-    x=0;
-  
-    analyser.getByteFrequencyData(dataArray);
-  
-    ctx.fillStyle = "rgba(0,0,0,0.2)";
-    ctx.fillRect(0,0, cWidth,cHeight);
-  }
 
-//const worker = new Worker('./worker.js');
+
+
+
+
 
 const ctx = canvas.getContext("2d");
 const cHeight = canvas.height;
@@ -104,5 +76,5 @@ const cWidth = canvas.width;
 
 //const offscreenCanvas = canvas.transferControlToOffscreen(); 
 //worker.postMessage({ offscreenCanvas }, [offscreenCanvas]);
-}
+
   
