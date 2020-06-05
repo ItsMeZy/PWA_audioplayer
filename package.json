@@ -17,6 +17,7 @@
     "sass": "^1.25.0"
   },
   "dependencies": {
-    "animejs": "^3.2.0"
+    "animejs": "^3.2.0",
+    "web-audio-api": "^0.2.2"
   }
 }
