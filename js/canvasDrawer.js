@@ -4,7 +4,7 @@ var player = document.getElementById("player");
 const cHeight = canvas.height;
 const cWidth = canvas.width;
 
-var audioContext = new AudioContext();
+export const audioContext = new AudioContext();
 var analyser = audioContext.createAnalyser();
 var source = audioContext.createMediaElementSource(player);
 source.connect(analyser).connect(audioContext.destination);
@@ -20,4 +20,4 @@ export function workerDraw(){
   var drawVisual = requestAnimationFrame(workerDraw);
   analyser.getByteFrequencyData(dataArray);
   worker.postMessage({dataArray: dataArray, bufferLenght: bufferLenght, cWidth: cWidth, cHeight:cHeight});
-};
+}

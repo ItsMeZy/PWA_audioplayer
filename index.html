@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Audio Player</title>
-    <link rel="stylesheet" href="scss/main.scss">
-    <!--<link rel="manifest" href="manifest.json">-->
+    <link rel="stylesheet" href="main.css">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
     <div id="app">
@@ -27,6 +27,11 @@
           
         </div>
     </div>
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
+    <script>
+      window.addEventListener('load',()=>{
+        navigator.serviceWorker.register('/sw.js');
+      });
+    </script>
   </body>
 </html>
